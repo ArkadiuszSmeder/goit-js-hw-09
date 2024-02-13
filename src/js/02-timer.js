@@ -55,7 +55,6 @@ function convertMs(ms) {
   startButton.addEventListener("click", () => {
     const selectedDate = new Date(datetimePicker.value);
     const currentDate = new Date();
-    const timeDiff = selectedDate.getTime() - currentDate.getTime();
 
     startButton.disabled = true;
 
