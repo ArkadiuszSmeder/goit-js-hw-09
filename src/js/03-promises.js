@@ -32,5 +32,7 @@ form.addEventListener('submit', (event) => {
         Notiflix.Notify.failure(`❌ Rejected promise ${position} in ${delay}ms`);
       });
   }
-  formData.reset();
+  delay.reset();
+  step.reset();
+  amount.reset();
 });
