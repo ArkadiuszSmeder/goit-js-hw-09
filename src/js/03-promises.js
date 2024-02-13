@@ -22,6 +22,8 @@ form.addEventListener('submit', (event) => {
   const step = Number(formData.get('step'));
   const amount = Number(formData.get('amount'));
 
+  form.reset();
+
   for (let i = 0; i < amount; i++) {
     const currentDelay = delay + i * step;
     createPromise(i, currentDelay)
@@ -32,5 +34,4 @@ form.addEventListener('submit', (event) => {
         Notiflix.Notify.failure(`❌ Rejected promise ${position} in ${delay}ms`);
       });
   }
-  form.reset();
 });
