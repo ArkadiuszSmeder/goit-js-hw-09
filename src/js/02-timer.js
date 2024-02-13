@@ -52,9 +52,10 @@ function convertMs(ms) {
   
   let timerInterval = 0;
   
-  startButton.addEventListener("click", () => {
+  startButton.addEventListener("click", (event) => {
+    event.preventDefault();
     const selectedDate = new Date(datetimePicker.value);
-    
+
     startButton.disabled = true;
     datetimePicker.disabled = true;
 
