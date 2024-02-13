@@ -53,11 +53,12 @@ function convertMs(ms) {
   let timerInterval = 0;
   
   startButton.addEventListener("click", () => {
+    const selectedDate = new Date(datetimePicker.value);
+    
     startButton.disabled = true;
     datetimePicker.disabled = true;
 
     timerInterval = setInterval(() => {
-      const selectedDate = new Date(datetimePicker.value);
       const currentDate = new Date();
       const timeDiff = selectedDate.getTime() - currentDate.getTime();
       if (timeDiff <= 0) {
